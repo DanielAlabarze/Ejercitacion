@@ -7,14 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <meta name="author" content="Daniel Alabarze" />
-    <meta name="description" content="Escuela Primaria UntrefSchool" />
+    <meta name="description" content="Portfolio" />
     <meta
       name="keywords"
-      content="Escuela Primaria UntrefSchool, HTML, CSS, JavaScript, React"
+      content="Alabarze Daniel Jose , HTML, CSS, JavaScript, React"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48" href="" />
-
+    <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48" href="./img/emoticon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <!-- Bootstrap CSS v5.2.1 -->
   </head>
@@ -24,8 +26,8 @@
       <!-- place navbar here -->
       <div class="nav__imagenNombre">
         <ul class="nav__imagenNombre--ul">
-          <li><div class="nav__imagenNombre--imagen">img</div></li>
-          <li class="nav__imagenNombre--Nombre">Nombre</li>
+          <li><div class="nav__imagenNombre--imagen"><img src="./img/emoticon.png" class="nav__imagenNombre--imagen" alt="Imagen Emoticon"></div></li>
+          <li class="nav__imagenNombre--Nombre">Daniel Alabarze</li>
         </ul>
       </div>
       <div class="nav__navLik">
@@ -36,7 +38,94 @@
         </ul>
       </div>
     </header>
-    <main></main>
+    <main class="main">
+      <section class="main__protectos">
+        <h1>Proyectos</h1>
+      </section>
+      <section class="main__sobreMi">
+        <h1 class="main__sobreMi--h1">Sobre Mi</h1>
+        <div>
+        <p class="main__sobreMi--p">
+          Soy Desarrollador Web Front End principiante con un fuerte interés
+          en la tecnología y la innovación. Estoy aprendiendo a desarrollar
+          sitios web utilizando HTML, CSS, Bootstrap y JavaScript, así como
+          frameworks como React. También estoy aprendiendo sobre diseño y
+          usabilidad web. Soy una parsona creativa, y siempre estoy buscando
+          nuevas formas de aprender y crecer.
+        </p>
+
+        <p class="main__sobreMi--p">
+          Tengo altas expectativas de mí mismo y de mi trabajo. Siempre
+          estoy buscando formas de mejorar mis habilidades y conocimientos,
+          y siempre estoy buscando nuevos desafíos. Creo que puedo lograr
+          grandes cosas si me esfuerzo lo suficiente y estoy comprometido
+          con mi trabajo.
+        </p>
+      </div>
+      <div>
+        <p class="main__sobreMi--p">
+          Tengo grandes ambiciones en cuanto a la programación. Quiero ser
+          capaz de crear aplicaciones web y móviles que sean útiles e
+          innovadoras. También quiero ser capaz de trabajar con otros
+          desarrolladores para crear proyectos grandes y complejos. Creo que
+          la programación es una herramienta poderosa. Estoy seguro de que
+          puedo utilizar mis habilidades y conocimientos para contribuir.
+        </p>
+        <p class="main__sobreMi--p">
+          Estoy deseando aprender más sobre desarrollo web y utilizar mis
+          habilidades para crear sitios web y aplicaciones que sean útiles y
+          atractivas. Creo que el desarrollo web es una carrera gratificante
+          que me permitirá utilizar mi creatividad y mis habilidades
+          técnicas para crecer profesionalmente.
+        </p>
+        </div>
+      </section>
+      <section class="main__contacto">
+        <h1>Contacto</h1>
+        <form class="main__contacto--form"
+        action="https://formsubmit.co/cdd549e640fcd9391986d8cd2129e28f"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <label for="nombre"></label>
+        <input
+          type="text"
+          name="nombre"
+          id="nombre"
+          placeholder="Nombre Completo"
+          required
+        />
+        <label for="email"></label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email"
+          required
+        />
+        <label for="tel"></label>
+        <input
+          type="tel"
+          name="tel"
+          id="tel"
+          placeholder="Número de Teléfono"
+          required
+        />
+
+        <label for="observaciones"></label>
+        <textarea
+          name="observaciones"
+          id="observaciones"
+          cols="30"
+          rows="3"
+          placeholder="Mensaje"
+          required
+        ></textarea>
+
+        <button type="submit">ENVIAR</button>
+      </form>
+      </section>
+    </main>
     <footer class="footer">
       <!-- place footer here -->
       <div class="footer__datos">

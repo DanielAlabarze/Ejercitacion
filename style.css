@@ -13,19 +13,30 @@ body {
   flex-direction: column;
   justify-content: space-between;
 
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-style: normal;
+
   /*Header*/
   .nav {
     border: solid 1px red;
     display: flex;
+    width: 100vw;
     justify-content: space-around;
     align-items: center;
     background-color: rgba(81, 236, 172, 0.466);
     padding-block: 0.5rem;
+    flex-wrap: wrap;
 
-    .nav__imagenNombre ul {
+    .nav__imagenNombre--ul {
+      width: 17rem;
+      height: 4rem;
       display: flex;
+      justify-content: center;
       align-items: center;
       gap: 1rem;
+      border: solid 1px rgb(109, 25, 204);
+      flex-wrap: wrap;
 
       .nav__imagenNombre--imagen {
         width: 4rem;
@@ -38,10 +49,45 @@ body {
       }
     }
 
-    .nav__navLik ul {
+    .nav__navLik--ul {
+      width: 17rem;
+      height: 4rem;
       display: flex;
+      justify-content: center;
       align-items: center;
       gap: 1rem;
+      border: solid 1px rgb(109, 25, 204);
+      flex-wrap: wrap;
+    }
+  }
+  /*Main*/
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .main__sobreMi {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-inline: 2rem;
+    }
+    .main__sobreMi--p {
+      padding-block: 0.3rem;
+      font-size: 0.85rem;
+      text-align: justify;
+    }
+    .main__contacto {
+      display: flex;
+      flex-direction: column;
+     justify-content: center;
+     align-items: center;
+
+      .main__contacto--form {
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
   /*footer*/
