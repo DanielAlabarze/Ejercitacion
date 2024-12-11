@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Belanosima&family=Satisfy&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -8,55 +10,104 @@
 
 body {
   width: 100vw;
-  height: 100vh;
+
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-
+  margin-inline: auto;
+  position: relative;
   font-family: "Roboto", serif;
   font-weight: 400;
   font-style: normal;
 }
-/*Nav*/
-.nav {
-  border: solid 1px red;
+
+.navbar {
   display: flex;
   width: 100vw;
-  justify-content: space-around;
-  align-items: center;
-  background-color: rgba(81, 236, 172, 0.466);
-  padding-block: 0.5rem;
-  flex-wrap: wrap;
+  position: relative;
+
+  background-color: rgb(93, 8, 110);
+  color: white;
+
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
 }
-.nav__imagenNombre--ul {
-  width: 17rem;
-  height: 4rem;
+.container-fluid {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  border: solid 1px rgb(109, 25, 204);
+  flex-direction: column;
+
   flex-wrap: wrap;
-}
-.nav__imagenNombre--imagen {
-  width: 4rem;
-  height: 4rem;
-  border: solid 1px red;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.nav__navLik--ul {
-  width: 17rem;
-  height: 4rem;
+.logoNavbar {
+  padding-inline: 5rem;
+  /*border: solid 1px rgb(102, 238, 24);*/
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-inline: auto;
+}
+.navbar-nav {
+  padding-inline: 5rem;
+  /*border: solid 1px red;*/
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-  border: solid 1px rgb(109, 25, 204);
   flex-wrap: wrap;
+  margin-inline: auto;
+}
+
+.nav-item span {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: white;
+}
+
+.navbar-collapse {
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+  text-align: center;
+}
+
+button.navbar-toggler {
+  background-color: rgb(220, 230, 222);
+  text-align: center;
+}
+
+.alabarzeDaniel {
+  color: white;
+  font-family: "Belanosima", sans-serif;
+  font-family: "Satisfy", cursive;
+  font-size: 1.3rem;
+}
+
+.nav-item span {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: white;
+}
+
+span:hover {
+  transition: all 0.1s ease-in;
+  color: rgb(214, 169, 240);
+}
+
+.navbar-collapse {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+button.navbar-toggler {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: rgb(220, 230, 222);
 }
 
 /*Header*/
@@ -67,6 +118,8 @@ header {
   flex-direction: column;
   align-items: center;
   padding-bottom: 1rem;
+  padding-top: 5rem;
+  padding-inline: auto;
   background: radial-gradient(
     circle,
     rgba(199, 108, 226, 1) 0%,
@@ -76,78 +129,118 @@ header {
   & div {
     text-align: center;
   }
-}
-header img {
-  width: 10rem;
+
+  & img {
+    width: 10rem;
+  }
+  & h2 {
+    margin-top: -1rem;
+    font-size: 2rem;
+    color: rgb(236, 170, 245);
+  }
+
+  & p {
+    font-size: 1.3rem;
+    color: rgb(220, 230, 222);
+  }
+  & .nombre {
+    font-family: "Belanosima", sans-serif;
+    font-family: "Satisfy", cursive;
+    font-size: 3rem;
+    color: white;
+    font-weight: 100;
+  }
 }
 
-header h2 {
-  margin-top: -1rem;
-  font-size: 2rem;
-  color: rgb(236, 170, 245);
+.containerHeader {
+  animation: init-avatar 1s ease-in;
+  padding-inline: auto;
 }
-
-header p {
-  font-size: 1.5rem;
-  color: rgb(220, 230, 222);
+@keyframes init-avatar {
+  0% {
+    transform: scale(0.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /*Main*/
 .main {
   width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 /*Protectos*/
-.contenedor__proyectos{
+.contenedor__proyectos {
   width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 1rem;
+  color: white;
+  background: radial-gradient(
+    circle,
+    rgba(199, 108, 226, 1) 0%,
+    rgba(85, 10, 110, 1) 100%
+  );
+  border-top: solid 1px white;
+  padding-inline: auto;
+}
+
+.tituloProyectos {
+  width: 100vw;
+  text-align: center;
 }
 
 .cajas {
-  background-color: rgb(220, 230, 222);
+  width: 100%;
+  margin-inline: auto;
   padding: 1rem 0;
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  text-align: center;
+  justify-content: center;
   transition: all 0.2s ease;
-  width: 100vw;
+
+  /* border: solid 5px red;*/
 }
 
 .cajas img {
-  width: 100%;
+  width: 16rem;
   background-color: white;
   padding: 0.1rem;
   display: block;
   transition: all 0.2s ease;
   border-radius: 1.5rem;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.9);
+  /* border: solid 5px red;*/
 }
 
 .cajas h2 {
-  font-size: 1.5rem;
+  width: 16rem;
+  font-size: 1.2rem;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
-  color: rgb(92, 3, 87);
+  color: white;
+  /*border: solid 5px red;*/
 }
 
 .overlay {
+  width: 16rem;
   transition: all 0.2s ease;
   opacity: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
-}
-.overlay .iconos-contenedor {
-  display: flex;
+
+  /*border: solid 5px rgb(8, 12, 231);*/
 }
 
 .overlay i {
   color: rgb(93, 8, 110);
-  font-size: 8rem;
-  margin: 10px;
+  font-size: 7rem;
 }
 
 .proyecto {
@@ -155,103 +248,74 @@ header p {
 }
 
 .proyecto:hover img {
-  opacity: 0.2;
+  opacity: 0.5;
 }
 
 .proyecto:hover .overlay {
   opacity: 1;
 }
 
-.divisor {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 40%;
-  color: rgb(220, 230, 222);
-}
-
-.linea {
-  border: 3px solid rgb(220, 230, 222);
-  width: 40%;
-  height: 5px;
-  margin: 0 1rem 0;
-}
-
-.divisor1 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 40%;
-  color: rgb(93, 8, 110);
-}
-
-.linea1 {
-  border: 3px solid rgb(93, 8, 110);
-  width: 40%;
-  height: 5px;
-  margin: 0 1rem 0;
-}
-
-i {
-  font-size: 2rem;
-}
-
-h2 {
-  color: rgb(93, 8, 110);
-}
-
 /*Sobre Mi*/
 .main__sobreMi {
   width: 100vw;
   display: flex;
-
+  color: white;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-inline: 2rem;
-  background-color: aquamarine;
+  padding-top: 1rem;
+  /*border: solid 1px rgb(238, 186, 15);*/
+  background-color: rgb(35, 14, 59);
+
   flex-wrap: wrap;
+  margin-inline: auto;
 }
 
 .main__parrafos {
+  width: 100%;
   display: flex;
-  width: 100vw;
-  border: solid 2px red;
+  margin-inline: auto;
+  /*border: solid 2px red;*/
   display: flex;
   flex-wrap: wrap;
-
+  margin-inline: auto;
 }
 .main__parrafos--div {
   width: 50%;
   min-width: 20rem;
-
-  border: solid 3px rgb(0, 4, 255);
+  padding-inline: 1rem;
+  /*border: solid 3px rgb(0, 4, 255);*/
 
   margin-inline: auto;
-  margin-block: auto;
+  margin-block: 0 auto 0;
 }
 .main__sobreMi--p {
   width: 100%;
   height: 50%;
 
-  padding: 1rem;
-
+  padding: 1.5rem;
+  color: white;
   font-size: 0.85rem;
   text-align: justify;
-  border: solid 1px green;
+  /*border: solid 1px green;*/
 }
 /*stack*/
 .stack {
-  padding: 1rem;
+  border-bottom: solid 1px white;
+  padding: 2rem;
   width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: white;
+  background-color: rgb(35, 14, 59);
+  margin-inline: auto;
   .lenguajes {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-inline: auto;
 
     & img {
       width: 3rem;
@@ -262,74 +326,104 @@ h2 {
 
 /*Contacto*/
 .main__contacto {
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-top: 1rem;
-}
-.main__contacto--form {
-  width: 25rem;
-  margin: 1rem;
-  display: flex;
-  flex-direction: column;
-  border: solid 1px green;
-  & input,
-  textarea,
-  button {
-    padding: 0.5rem;
-    margin: 0.2rem;
+  color: white;
+  background: radial-gradient(
+    circle,
+    rgba(199, 108, 226, 1) 0%,
+    rgba(85, 10, 110, 1) 100%
+  );
+  border-top: solid 1px white;
+  margin-inline: auto;
+
+  & .main__contacto--form {
+    width: 20rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+    /*border: solid 1px green;*/
+    & input,
+    textarea,
+    button {
+      padding: 0.5rem;
+      margin: 0.2rem;
+    }
+    button {
+      border-radius: 30px;
+      color: white;
+      background-color: rgb(35, 14, 59);
+    }
   }
 }
 
 /*footer*/
 .footer {
   width: 100vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: rgb(93, 8, 110);
   margin-bottom: 0px;
-}
-.footer__datos--ul {
-  width: 50vw;
-  height: auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
 
-  border: solid 1px rgb(30, 243, 11);
-  flex-wrap: wrap;
-}
-.footer__datos--li {
-  width: 7rem;
-  height: 2.3rem;
-  display: flex;
-  gap: 0.3rem;
-  align-items: center;
-  border: solid 1px red;
-}
+  flex-direction: column;
 
-.footer__redes--ul {
-  width: 50vw;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  & .datosRedes {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /*border: solid 1px rgb(204, 18, 49);*/
 
-  border: solid 1px rgb(17, 0, 255);
-  flex-wrap: wrap;
-}
-.footer__redes--li {
-  width: 7rem;
-  height: 2.3rem;
-  display: flex;
-  gap: 0.3rem;
-  align-items: center;
-  border: solid 1px red;
-}
-.footer__redes--img {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  border: solid 1px red;
+    & .footer__datos,
+    .footer__Redes {
+      display: flex;
+      justify-content: center;
+      width: 50%;
+      /*border: solid 1px rgb(30, 243, 11);*/
+
+      & .footer__datos--ul,
+      .footer__redes--ul {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        flex-wrap: wrap;
+        padding-inline: 0;
+        /*background-color: rgb(255, 60, 0);*/
+
+        & .footer__datos--li,
+        .footer__redes--li {
+          width: 8rem;
+          height: 3rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          /*border: solid 1px red;*/
+          /*background-color: blue;*/
+          margin-inline: auto;
+
+          & i {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+  & .containerCopyright {
+    background-color: rgb(35, 14, 59);
+    text-align: center;
+    padding-block: 0.3rem;
+    color: white;
+    & .pieDesarrollador {
+      color: white;
+      font-family: "Belanosima", sans-serif;
+      font-family: "Satisfy", cursive;
+      font-size: 1rem;
+    }
+  }
 }
