@@ -1,19 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Belanosima&family=Satisfy&display=swap");
 
+:root {
+  --colorPrimario: rgb(92, 3, 87);
+  --colorSecundario: rgb(35, 14, 59);
+  --colorTerciario: rgb(93, 8, 110);
+  --colorRadialGradient: radial-gradient(
+    circle,
+    rgba(199, 108, 226, 1) 0%,
+    rgba(85, 10, 110, 1) 100%
+  );
+
+}
+
 * {
   padding: 0;
   margin: 0;
   list-style: none;
-  box-sizing: border-box;
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 body {
   width: 100vw;
-
   display: flex;
   flex-direction: column;
-  margin-inline: auto;
   position: relative;
   font-family: "Roboto", serif;
   font-weight: 400;
@@ -21,21 +31,18 @@ body {
 }
 
 .navbar {
+  width: 100%;
   display: flex;
-  width: 100vw;
+  justify-content: center;
   position: relative;
-
-  background-color: rgb(93, 8, 110);
+  background-color: var(--colorPrimario);
   color: white;
-
   position: fixed;
   z-index: 1;
-  width: 100vw;
 }
 .container-fluid {
   display: flex;
   flex-direction: column;
-
   flex-wrap: wrap;
 }
 
@@ -43,7 +50,6 @@ body {
   padding-inline: 5rem;
   /*border: solid 1px rgb(102, 238, 24);*/
   display: flex;
-
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -68,7 +74,6 @@ body {
 .navbar-collapse {
   display: flex;
   justify-content: center;
-
   align-items: center;
   text-align: center;
 }
@@ -120,16 +125,11 @@ header {
   padding-bottom: 1rem;
   padding-top: 5rem;
   padding-inline: auto;
-  background: radial-gradient(
-    circle,
-    rgba(199, 108, 226, 1) 0%,
-    rgba(85, 10, 110, 1) 100%
-  );
-
+  background: var(--colorRadialGradient);
+   
   & div {
     text-align: center;
   }
-
   & img {
     width: 10rem;
   }
@@ -138,7 +138,6 @@ header {
     font-size: 2rem;
     color: rgb(236, 170, 245);
   }
-
   & p {
     font-size: 1.3rem;
     color: rgb(220, 230, 222);
@@ -178,11 +177,7 @@ header {
   align-items: center;
   padding-block: 1rem;
   color: white;
-  background: radial-gradient(
-    circle,
-    rgba(199, 108, 226, 1) 0%,
-    rgba(85, 10, 110, 1) 100%
-  );
+  background: var(--colorRadialGradient);
   border-top: solid 1px white;
   padding-inline: auto;
 }
@@ -202,7 +197,6 @@ header {
   text-align: center;
   justify-content: center;
   transition: all 0.2s ease;
-
   /* border: solid 5px red;*/
 }
 
@@ -234,12 +228,11 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   /*border: solid 5px rgb(8, 12, 231);*/
 }
 
 .overlay i {
-  color: rgb(93, 8, 110);
+  color: var(--colorTerciario);
   font-size: 7rem;
 }
 
@@ -265,8 +258,8 @@ header {
   align-items: center;
   padding-top: 1rem;
   /*border: solid 1px rgb(238, 186, 15);*/
-  background-color: rgb(35, 14, 59);
-
+  background-color: var(--colorSecundario);
+  border-top: solid 1px white;
   flex-wrap: wrap;
   margin-inline: auto;
 }
@@ -285,20 +278,19 @@ header {
   min-width: 20rem;
   padding-inline: 1rem;
   /*border: solid 3px rgb(0, 4, 255);*/
-
   margin-inline: auto;
   margin-block: 0 auto 0;
 }
 .main__sobreMi--p {
   width: 100%;
   height: 50%;
-
   padding: 1.5rem;
   color: white;
   font-size: 0.85rem;
   text-align: justify;
   /*border: solid 1px green;*/
 }
+
 /*stack*/
 .stack {
   border-bottom: solid 1px white;
@@ -309,14 +301,13 @@ header {
   justify-content: center;
   align-items: center;
   color: white;
-  background-color: rgb(35, 14, 59);
+  background-color: var(--colorSecundario);
   margin-inline: auto;
   .lenguajes {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin-inline: auto;
-
     & img {
       width: 3rem;
       margin: 0.5rem;
@@ -333,11 +324,7 @@ header {
   align-items: center;
   padding-top: 1rem;
   color: white;
-  background: radial-gradient(
-    circle,
-    rgba(199, 108, 226, 1) 0%,
-    rgba(85, 10, 110, 1) 100%
-  );
+  background: var(--colorRadialGradient);
   border-top: solid 1px white;
   margin-inline: auto;
 
@@ -349,28 +336,57 @@ header {
     margin-inline: auto;
     /*border: solid 1px green;*/
     & input,
-    textarea,
+    textarea {
+      padding: 0.5rem;
+      margin: 0.2rem;
+      border-radius: 8px;
+    }
     button {
       padding: 0.5rem;
       margin: 0.2rem;
-    }
-    button {
       border-radius: 30px;
       color: white;
-      background-color: rgb(35, 14, 59);
+      background-color: var(--colorSecundario);
     }
   }
+}
+
+input::placeholder {
+  color: var(--colorTerciario);
+}
+input:focus {
+  outline: 2px solid var(--colorSecundario);
+  background-color: rgb(214, 169, 240);
+}
+input:focus::placeholder {
+  color: rgb(131, 66, 196);
+}
+
+input:valid {
+  outline: 3px solid var(--colorSecundario);
+}
+
+textarea::placeholder {
+  color: rgb(93, 8, 110, 0.5);
+}
+textarea:focus {
+  outline: 2px solid var(--colorSecundario);
+  background-color: rgb(214, 169, 240);
+}
+
+button[type="submit"]:hover {
+  transition: all 0.1s ease-in;
+  background-color: var(--colorPrimario);
 }
 
 /*footer*/
 .footer {
   width: 100vw;
-  background-color: rgb(93, 8, 110);
+  background-color: var(--colorTerciario);
   margin-bottom: 0px;
   display: flex;
-
   flex-direction: column;
-
+  border-top: solid 1px white;
   & .datosRedes {
     width: 100%;
     display: flex;
@@ -381,7 +397,8 @@ header {
     .footer__Redes {
       display: flex;
       justify-content: center;
-      width: 50%;
+   
+      width: 100%;
       /*border: solid 1px rgb(30, 243, 11);*/
 
       & .footer__datos--ul,
@@ -401,21 +418,39 @@ header {
           width: 8rem;
           height: 3rem;
           display: flex;
-          justify-content: center;
+          justify-content: space-around;
           align-items: center;
           /*border: solid 1px red;*/
           /*background-color: blue;*/
-          margin-inline: auto;
+          
+          & .circuloIcono {
+            display: flex;
+            justify-content: center;
+            width: 2.7rem;
+            height: 2.7rem;
+            border-radius: 50%;
+            border: solid 1px rgb(214, 169, 240);
+            &:hover {
+              background-color: var(--colorSecundario);
+              transition: all 0.1s ease-in;
+            }
+          }
 
           & i {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
+            color: white;
+            align-self: center;
+            &:hover {
+              color: rgb(214, 169, 240);
+              transition: all 0.1s ease-in;
+            }
           }
         }
       }
     }
   }
   & .containerCopyright {
-    background-color: rgb(35, 14, 59);
+    background-color: var(--colorSecundario);
     text-align: center;
     padding-block: 0.3rem;
     color: white;
@@ -424,6 +459,99 @@ header {
       font-family: "Belanosima", sans-serif;
       font-family: "Satisfy", cursive;
       font-size: 1rem;
+    }
+  }
+}
+
+/*Media*/
+@media (min-width: 320px) and (max-width: 520px) {
+  .logoNavbar {
+    padding-inline: 6rem;
+    padding-block: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-inline: auto;
+  }
+  .main__parrafos--div {
+    width: 100%;
+    padding-inline: 0.5rem;
+    margin-inline: auto;
+    margin-block: 0 auto 0;
+  }
+  .main__sobreMi--p {
+    width: 100%;
+    height: 50%;
+    padding: 0.5rem 1rem;
+    color: white;
+    font-size: 0.85rem;
+    text-align: justify;
+    /*border: solid 1px green;*/
+  }
+  .stack {
+    padding: 0.5rem;
+    width: 100vw;
+
+    .lenguajes {
+      margin-inline: auto;
+
+      & img {
+        width: 1.7rem;
+        padding: 0.1rem;
+      }
+    }
+  }
+  .footer {
+    padding-top: 0.2rem;
+
+  }
+}
+
+@media (min-width: 521px) and (max-width: 720px) {
+  .logoNavbar {
+    padding-inline: 14.5rem;
+    padding-block: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-self: center;
+    margin-inline: auto;
+  }
+  .main__parrafos--div {
+    width: 100%;
+    margin-inline: auto;
+    margin-block: 0 auto 0;
+  }
+  .main__sobreMi--p {
+    width: 100%;
+    height: 50%;
+    padding: 0.5rem 1rem;
+    color: white;
+    font-size: 0.85rem;
+    text-align: justify;
+  }
+  .stack {
+    border-bottom: solid 1px white;
+    padding: 1rem;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: var(--colorSecundario);
+    margin-inline: auto;
+    .lenguajes {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-inline: auto;
+      & img {
+        width: 2.7rem;
+        margin: 0.5rem;
+      }
     }
   }
 }
